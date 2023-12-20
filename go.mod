@@ -1,4 +1,4 @@
-module github.com/wabarc/ipfs-pinner
+module github.com/dbarbashov/ipfs-pinner
 
 go 1.19
 
