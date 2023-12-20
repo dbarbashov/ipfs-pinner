@@ -6,7 +6,6 @@ require (
 	github.com/ipfs/boxo v0.8.1
 	github.com/ipfs/go-cid v0.4.0
 	github.com/wabarc/helper v0.0.0-20230418130954-be7440352bcb
-	github.com/ybbus/httpretry v1.0.2
 )
 
 require (

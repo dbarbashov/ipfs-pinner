@@ -12,8 +12,6 @@ import (
 
 	"github.com/wabarc/helper"
 	"github.com/wabarc/ipfs-pinner/file"
-
-	httpretry "github.com/wabarc/ipfs-pinner/http"
 )
 
 const (
@@ -128,8 +126,7 @@ func (p *Pinata) pinFile(r io.Reader, boundary string) (string, error) {
 		req.Header.Add("Authorization", "Bearer "+p.Apikey)
 	}
 
-	client := httpretry.NewClient(p.Client)
-	resp, err := client.Do(req)
+	resp, err := p.Client.Do(req)
 	if err != nil {
 		return "", err
 	}
@@ -175,8 +172,7 @@ func (p *Pinata) PinHash(hash string) (bool, error) {
 		req.Header.Add("Authorization", "Bearer "+p.Apikey)
 	}
 
-	client := httpretry.NewClient(p.Client)
-	resp, err := client.Do(req)
+	resp, err := p.Client.Do(req)
 	if err != nil {
 		return false, err
 	}

@@ -10,8 +10,6 @@ import (
 	"os"
 
 	"github.com/wabarc/ipfs-pinner/file"
-
-	httpretry "github.com/wabarc/ipfs-pinner/http"
 )
 
 const api = "https://api.nft.storage"
@@ -93,8 +91,7 @@ func (nft *NFTStorage) pinFile(r io.Reader, boundary string) (string, error) {
 	}
 	req.Header.Add("Content-Type", boundary)
 	req.Header.Add("Authorization", "Bearer "+nft.Apikey)
-	client := httpretry.NewClient(nft.Client)
-	resp, err := client.Do(req)
+	resp, err := nft.Client.Do(req)
 	if err != nil {
 		return "", err
 	}

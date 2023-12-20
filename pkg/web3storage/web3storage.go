@@ -10,8 +10,6 @@ import (
 
 	"github.com/wabarc/helper"
 	"github.com/wabarc/ipfs-pinner/file"
-
-	httpretry "github.com/wabarc/ipfs-pinner/http"
 )
 
 const api = "https://api.web3.storage"
@@ -100,8 +98,7 @@ func (web3 *Web3Storage) pinFile(r io.Reader, boundary string) (string, error) {
 	}
 	req.Header.Add("Content-Type", boundary)
 	req.Header.Add("Authorization", "Bearer "+web3.Apikey)
-	client := httpretry.NewClient(web3.Client)
-	resp, err := client.Do(req)
+	resp, err := web3.Client.Do(req)
 	if err != nil {
 		return "", err
 	}

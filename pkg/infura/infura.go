@@ -11,8 +11,6 @@ import (
 	"github.com/ipfs/boxo/files"
 	"github.com/wabarc/helper"
 	"github.com/wabarc/ipfs-pinner/file"
-
-	httpretry "github.com/wabarc/ipfs-pinner/http"
 )
 
 const api = "https://ipfs.infura.io:5001"
@@ -101,7 +99,6 @@ func (inf *Infura) PinWithBytes(buf []byte) (string, error) {
 
 func (inf *Infura) pinFile(r io.Reader, boundary string) (string, error) {
 	endpoint := api + "/api/v0/add?cid-version=1&pin=true"
-	client := httpretry.NewClient(inf.Client)
 
 	req, err := http.NewRequest(http.MethodPost, endpoint, r)
 	if err != nil {
@@ -112,7 +109,7 @@ func (inf *Infura) pinFile(r io.Reader, boundary string) (string, error) {
 	}
 	req.Header.Add("Content-Type", boundary)
 	req.Header.Set("Content-Disposition", `form-data; name="files"`)
-	resp, err := client.Do(req)
+	resp, err := inf.Client.Do(req)
 	if err != nil {
 		return "", err
 	}
@@ -162,8 +159,7 @@ func (inf *Infura) PinHash(hash string) (bool, error) {
 	if inf.Apikey != "" && inf.Secret != "" {
 		req.SetBasicAuth(inf.Apikey, inf.Secret)
 	}
-	client := httpretry.NewClient(inf.Client)
-	resp, err := client.Do(req)
+	resp, err := inf.Client.Do(req)
 	if err != nil {
 		return false, err
 	}
