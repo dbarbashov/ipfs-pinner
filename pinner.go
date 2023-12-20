@@ -1,4 +1,4 @@
-package pinner // import "github.com/wabarc/ipfs-pinner"
+package pinner // import "github.com/dbarbashov/ipfs-pinner"
 
 import (
 	"fmt"
@@ -6,10 +6,10 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/wabarc/ipfs-pinner/pkg/infura"
-	"github.com/wabarc/ipfs-pinner/pkg/nftstorage"
-	"github.com/wabarc/ipfs-pinner/pkg/pinata"
-	"github.com/wabarc/ipfs-pinner/pkg/web3storage"
+	"github.com/dbarbashov/ipfs-pinner/pkg/infura"
+	"github.com/dbarbashov/ipfs-pinner/pkg/nftstorage"
+	"github.com/dbarbashov/ipfs-pinner/pkg/pinata"
+	"github.com/dbarbashov/ipfs-pinner/pkg/web3storage"
 )
 
 var ErrPinner = fmt.Errorf("unsupported pinner")

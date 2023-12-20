@@ -1,4 +1,4 @@
-package pinner // import "github.com/wabarc/ipfs-pinner"
+package pinner // import "github.com/dbarbashov/ipfs-pinner"
 
 import (
 	"bytes"

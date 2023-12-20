@@ -8,8 +8,8 @@ import (
 	"mime/multipart"
 	"net/http"
 
+	"github.com/dbarbashov/ipfs-pinner/file"
 	"github.com/wabarc/helper"
-	"github.com/wabarc/ipfs-pinner/file"
 )
 
 const api = "https://api.web3.storage"

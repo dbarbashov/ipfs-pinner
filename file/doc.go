@@ -5,4 +5,4 @@
 /*
 Package file provides a series of file creation functions.
 */
-package file // import "github.com/wabarc/ipfs-pinner/file"
+package file // import "github.com/dbarbashov/ipfs-pinner/file"

@@ -1,8 +1,8 @@
 # ipfs-pinner
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/wabarc/ipfs-pinner)](https://goreportcard.com/report/github.com/wabarc/ipfs-pinner)
-[![Go Reference](https://img.shields.io/badge/godoc-reference-blue.svg)](https://pkg.go.dev/github.com/wabarc/ipfs-pinner)
-[![Releases](https://img.shields.io/github/v/release/wabarc/ipfs-pinner.svg?include_prereleases&color=blue)](https://github.com/wabarc/ipfs-pinner/releases)
+[![Go Report Card](https://goreportcard.com/badge/github.com/dbarbashov/ipfs-pinner)](https://goreportcard.com/report/github.com/dbarbashov/ipfs-pinner)
+[![Go Reference](https://img.shields.io/badge/godoc-reference-blue.svg)](https://pkg.go.dev/github.com/dbarbashov/ipfs-pinner)
+[![Releases](https://img.shields.io/github/v/release/wabarc/ipfs-pinner.svg?include_prereleases&color=blue)](https://github.com/dbarbashov/ipfs-pinner/releases)
 [![ipfs-pinner](https://snapcraft.io/ipfs-pinner/badge.svg)](https://snapcraft.io/ipfs-pinner)
 
 `ipfs-pinner` is a toolkit to help upload files or specific content id to IPFS pinning services.
@@ -14,7 +14,7 @@ Supported Golang version: See [.github/workflows/testing.yml](./.github/workflow
 Via Golang package get command
 
 ```sh
-go get -u github.com/wabarc/ipfs-pinner/cmd/ipfs-pinner
+go get -u github.com/dbarbashov/ipfs-pinner/cmd/ipfs-pinner
 ```
 
 Using [Snapcraft](https://snapcraft.io/ipfs-pinner) (on GNU/Linux)
@@ -63,7 +63,7 @@ Go package:
 import (
         "fmt"
 
-        "github.com/wabarc/ipfs-pinner/pkg/infura"
+        "github.com/dbarbashov/ipfs-pinner/pkg/infura"
 )
 
 func main() {
@@ -82,7 +82,7 @@ or requests with project authentication
 import (
         "fmt"
 
-        "github.com/wabarc/ipfs-pinner/pkg/infura"
+        "github.com/dbarbashov/ipfs-pinner/pkg/infura"
 )
 
 func main() {
@@ -130,7 +130,7 @@ Go package:
 import (
         "fmt"
 
-        "github.com/wabarc/ipfs-pinner/pkg/pinata"
+        "github.com/dbarbashov/ipfs-pinner/pkg/pinata"
 )
 
 func main() {
@@ -165,7 +165,7 @@ Go package:
 import (
         "fmt"
 
-        "github.com/wabarc/ipfs-pinner/pkg/nftstorage"
+        "github.com/dbarbashov/ipfs-pinner/pkg/nftstorage"
 )
 
 func main() {
@@ -205,7 +205,7 @@ Go package:
 import (
         "fmt"
 
-        "github.com/wabarc/ipfs-pinner/pkg/web3storage"
+        "github.com/dbarbashov/ipfs-pinner/pkg/web3storage"
 )
 
 func main() {
@@ -221,4 +221,4 @@ func main() {
 
 ## License
 
-Permissive GPL 3.0 license, see the [LICENSE](https://github.com/wabarc/ipfs-pinner/blob/main/LICENSE) file for details.
+Permissive GPL 3.0 license, see the [LICENSE](https://github.com/dbarbashov/ipfs-pinner/blob/main/LICENSE) file for details.

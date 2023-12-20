@@ -6,7 +6,7 @@ summary: A toolkit to upload files or directory to IPFS pinning services.
 
 description: |
   ipfs-pinner is a toolkit to help upload files or specific content id to IPFS pinning services.
-  Website https://github.com/wabarc/ipfs-pinner
+  Website https://github.com/dbarbashov/ipfs-pinner
 
   Supported Pinning Services：
 
@@ -42,8 +42,8 @@ base: core18
 parts:
   ipfs-pinner:
     plugin: go
-    source: https://github.com/wabarc/ipfs-pinner.git
-    go-importpath: github.com/wabarc/ipfs-pinner/cmd/ipfs-pinner
+    source: https://github.com/dbarbashov/ipfs-pinner.git
+    go-importpath: github.com/dbarbashov/ipfs-pinner/cmd/ipfs-pinner
     build-packages:
       - build-essential
 

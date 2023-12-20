@@ -3,7 +3,7 @@ export CGO_ENABLED = 0
 export GOPROXY = https://proxy.golang.org
 
 NAME = ipfs-pinner
-REPO = github.com/wabarc/ipfs-pinner
+REPO = github.com/dbarbashov/ipfs-pinner
 BINDIR ?= ./build/binary
 PACKDIR ?= ./build/package
 LDFLAGS := $(shell echo "-X '${REPO}/version.Version=`git describe --tags --abbrev=0`'")
@@ -12,7 +12,7 @@ LDFLAGS := $(shell echo "${LDFLAGS} -X '${REPO}/version.BuildDate=`date +%FT%T%z
 GOBUILD ?= go build -trimpath --ldflags "-s -w ${LDFLAGS} -buildid=" -v
 VERSION ?= $(shell git describe --tags `git rev-list --tags --max-count=1` | sed -e 's/v//g')
 GOFILES ?= $(wildcard ./cmd/ipfs-pinner/*.go)
-PROJECT := github.com/wabarc/ipfs-pinner
+PROJECT := github.com/dbarbashov/ipfs-pinner
 PACKAGES ?= $(shell go list ./...)
 DOCKER ?= $(shell which docker || which podman)
 DOCKER_IMAGE := wabarc/ipfs-pinner

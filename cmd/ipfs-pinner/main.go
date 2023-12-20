@@ -9,7 +9,7 @@ import (
 
 	"github.com/ipfs/go-cid"
 
-	pinner "github.com/wabarc/ipfs-pinner"
+	pinner "github.com/dbarbashov/ipfs-pinner"
 )
 
 type pin struct {

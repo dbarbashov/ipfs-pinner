@@ -2,6 +2,7 @@ package infura
 
 import (
 	"bytes"
+	"github.com/ipfs/go-cid"
 	"io"
 	"io/ioutil"
 	"mime"
@@ -12,9 +13,8 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/ipfs/go-cid"
+	"github.com/dbarbashov/ipfs-pinner/file"
 	"github.com/wabarc/helper"
-	"github.com/wabarc/ipfs-pinner/file"
 )
 
 var (

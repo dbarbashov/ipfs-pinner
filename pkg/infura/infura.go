@@ -8,9 +8,9 @@ import (
 	"mime/multipart"
 	"net/http"
 
+	"github.com/dbarbashov/ipfs-pinner/file"
 	"github.com/ipfs/boxo/files"
 	"github.com/wabarc/helper"
-	"github.com/wabarc/ipfs-pinner/file"
 )
 
 const api = "https://ipfs.infura.io:5001"

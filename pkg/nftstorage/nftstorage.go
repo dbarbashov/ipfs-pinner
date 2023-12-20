@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/wabarc/ipfs-pinner/file"
+	"github.com/dbarbashov/ipfs-pinner/file"
 )
 
 const api = "https://api.nft.storage"
